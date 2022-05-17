@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Samsonite</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#plus1").click(function(){
+                    $(".line1a").slideToggle("slow");
+                });
+                $("#plus2").click(function(){
+                    $(".line2a").slideToggle("slow");
+                });
+                $("#plus3").click(function(){
+                    $(".line3a").slideToggle("slow");
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="style.css"
+
+    </head>
+    <body>
+        <div class=".container-fluid" >
+            <div class="logo_row">
+                <p id="logo">Samsonite</p>
+                <p id="contact">Contact</p>
+            </div>
+            <div class="navbar_row" > 
+                <p class="navbar_element">ABOUT US</p>
+                <p class="navbar_element">INVESTOR RELATIONS</p>
+                <p class="navbar_element">SUSTAINABILITY</p>
+            </div>
+            <div class="background_row">
+                <img id="background" class="img-fluid mx-auto d-block" src="FE-ex1-banner.jpg">
+            </div>
+            <div class="label_row">
+                <div id="link">
+                    <p class="link_element" id="home">Home</p>
+                    <p class="link_element">></p>
+                    <p class="link_element">Contact us</p>
+                </div>
+                <div id="label">CONTACT US</div>
+            </div>
+            <div class="info_row">
+                <div class="phone">
+                    <p class="heading">By Phone:</p>
+                    <p>+852 2422 2611 in Hong Kong</p>
+                </div>
+                <div class="email">
+                    <p class="heading">By Email:</p>
+                    <p>investorrelations@samsionate.com</p>
+                </div>
+                <hr>
+                <div class="card mx-auto my-4 d-block">
+                    <div class="card-body">
+                        <p class="font-weight-bold">Joint Corporate Headquarters and Registered Office in Luxembourg</p>
+                        <p>13-15 avenue de la Liberté</p>
+                        <p>L-1931 Luxembourg</p>
+                        <a href="https://www.google.com/maps">VIEW ON MAP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_row">
+                <div class="footer mx-auto pt-3">
+                    <div class="row1 text-white">
+                        <hr style="background-color:white;">
+                        <div class="line1 mt-1">
+                            <p style="width: 80%;">Joint Company Headquarters and Registered Office in Luxembourg</p>
+                            <p id="plus1" style="font-size: 30px;float:right;margin:0;">+</p>
+                        </div>
+                        <div class="line1a ml-2">
+                            <p>13-15 avenue de la Liberté</p>
+                            <p>L-1931 Luxembourg</p>
+                        </div>
+                    </div>                   
+                    <div class="row2 text-white">
+                        <hr style="background-color:white;">
+                        <div class="line2 mt-1">
+                            <p style="width: 80%;">Joint Corporate Headquarters</p>
+                            <p id="plus2" style="font-size: 30px;float:right;margin:0;">+</p>
+                        </div>
+                        <div class="line2a ml-2">
+                            <p>575 West Street, Suite 110</p>
+                            <p>Mansfield, MA 02048, USA</p>
+                        </div>
+                    </div>
+                    <div class="row3 text-white">
+                        <hr style="background-color:white;">
+                        <div class="line3 mt-1">
+                            <p style="width: 80%;">Principal Place of Business in HongKong</p>
+                            <p id="plus3" style="font-size: 30px;float:right;margin:0;">+</p>
+                        </div>
+                        <div class="line3a ml-2">
+                            <p>25/F, Tower 2, The Gateway,</p>
+                            <p>Harbour City, 25 CantonRoad</p>
+                            <p>Tsimhatsui, Kowloon, Hong Kong</p>
+                        </div>
+                    </div>
+                    <div class="row4 text-white">
+                        <hr style="background-color:white;">
+                        <p class="mt-1">Call us on +852 2422 2611</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

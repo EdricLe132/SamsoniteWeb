@@ -1,0 +1,133 @@
+.container-fluid {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .container-fluid {
+        width: 50%;
+    }
+}
+hr{
+    margin: 0px;
+    height: 1px;
+}
+.logo_row{
+    background-color: black;
+    height: 60px;
+}
+#logo{
+    position: absolute;
+    margin-left: 10px;
+    color: white;
+    margin: 10px;
+    font-size: 25px;
+}
+#contact{
+    position: absolute;
+    margin: 20px;
+    right: 15px;
+    color: white;
+}
+.navbar_row{
+    display: flex;
+    justify-content: center;
+    background-color: #000099;
+    height: 35px;
+}
+.navbar_element{
+    color:white;
+    margin: 5px 20px;
+    padding: 1px;
+    font-size: 12px;
+}
+.background_row{
+    background-color: white;
+}
+#background{
+    max-width: 100%; 
+    height: auto;
+}
+.label_row{
+    background-color: white;
+    height: 20%;
+}
+#link{
+    height:2rem;
+}
+.link_element{
+    display: inline-block;
+    font-size: 15px;
+    padding: 2px;
+    color: #0000CC;
+    margin-top: 5px;
+}
+#home{
+    margin-left: 16px;
+}
+#label{
+    font-size: 30px;
+    text-align: center;
+    padding: 25px;
+    color: #000099;
+}
+.info_row{
+    background-color: #E0E0E0;
+    height:380px;
+}
+.phone{
+    text-align: center;
+    padding-top: 30px;
+}
+.phone *{
+    display: inline-block;
+}
+.phone .heading{
+    font-weight: bold;
+}
+.email{
+    text-align: center;
+}
+.email *{
+    display: inline-block;
+}
+.email .heading{
+    font-weight: bold;
+}
+.card{
+    height:auto;
+    width: 85%;
+}
+.card-body{
+    background-color: white;
+}
+.footer_row{
+    background-color: black;
+    height: 300px;
+}
+.footer{
+    width: 85%;   
+}
+.footer > *{
+    font-weight: bold;
+}
+.line1 *{
+    display: inline-block;
+}
+.line1a{
+    display: none;
+}
+.line2 *{
+    display: inline-block;
+}
+.line2a{
+    display: none;
+}
+.line3 *{
+    display: inline-block;
+}
+.line3a{
+    display: none;
+}
+.fa{
+    color:white;
+}
