@@ -11,6 +11,39 @@ hr{
     margin: 0px;
     height: 1px;
 }
+.countdown{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.time{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.time *{
+    margin-top: 10px;
+}
+.time_title{
+    font-size: 20px;
+}
+.hour, .minute, .second{
+    display: flex;
+    justify-content: center;
+}
+#hour1, #hour2, #minute1, #minute2, #second1, #second2{
+    margin: 2px;
+    padding: 10px;
+    background-color: #404040;
+    color: #3399FF;
+    font-size: 30px;
+    border-radius: 10%;
+}
+.divide{
+    margin:10px;
+    padding-top: 17%;
+}
 .logo_row{
     background-color: black;
     height: 60px;
@@ -72,7 +105,7 @@ hr{
 }
 .info_row{
     background-color: #E0E0E0;
-    height:380px;
+    height:365px;
 }
 .phone{
     text-align: center;

@@ -4,11 +4,41 @@
         <title>Samsonite</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script src="script.js"></script>
+        <script type="text/javascript">    
             $(document).ready(function(){
+                var date = new Date();
+                date.setDate(date.getDate()+1);
+                date.setHours(0, 0, 0, 0);
+                $("#myModal").countdown(date,function(event){
+                    $("#hour1").text(
+                        event.strftime('%H')[0]
+                    );
+                    $("#hour2").text(
+                        event.strftime('%H')[1]
+                    );
+                    $("#minute1").text(
+                        event.strftime('%M')[0]
+                    );
+                    $("#minute2").text(
+                        event.strftime('%M')[1]
+                    );
+                    $("#second1").text(
+                        event.strftime('%S')[0]
+                    );
+                    $("#second2").text(
+                        event.strftime('%S')[1]
+                    );
+                })
+                $('#myModal').modal();
                 $("#plus1").click(function(){
+                    $(this).html()
                     $(".line1a").slideToggle("slow");
                 });
                 $("#plus2").click(function(){
@@ -19,11 +49,46 @@
                 });
             });
         </script>
-        <link rel="stylesheet" href="style.css"
-
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class=".container-fluid" >
+            <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="countdown">
+                                <h2 class="text-md-center">COMING SOON</h2>
+                                <div class="time">
+                                    <div class="container-hour">
+                                        <h3 class="time_title">Hours</h3>
+                                        <div class="hour">
+                                            <h3 id="hour1"></h3>
+                                            <h3 id="hour2"></h3>
+                                        </div>
+                                    </div>
+                                    <h3 class="divide">:</h3>
+                                    <div class="container-minute">
+                                        <h3 class="time_title">Minutes</h3>
+                                        <div class="minute">
+                                            <h3 id="minute1"></h3>
+                                            <h3 id="minute2"></h3>
+                                        </div>
+                                    </div>
+                                    <h3 class="divide">:</h3>
+                                    <div class="container-second">
+                                        <h3 class="time_title">Seconds</h3>
+                                        <div class="second">
+                                            <h3 id="second1"></h3>
+                                            <h3 id="second2"></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="logo_row">
                 <p id="logo">Samsonite</p>
                 <p id="contact">Contact</p>
@@ -106,5 +171,7 @@
                 </div>
             </div>
         </div>
+        <script src="jquery.countdown.js"></script>
+        <script scr="jquery.countdown.min.js"></script>
     </body>
 </html>
