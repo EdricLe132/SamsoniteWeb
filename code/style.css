@@ -7,10 +7,16 @@
         width: 50%;
     }
 }
+@media (max-width: 500px) {
+    #myModal {
+        width: 95%;
+    }
+}
 hr{
     margin: 0px;
     height: 1px;
 }
+
 .countdown{
     display: flex;
     justify-content: center;
@@ -44,21 +50,24 @@ hr{
     margin:10px;
     padding-top: 17%;
 }
-.logo_row{
+.logo_row_mobile{
     background-color: black;
     height: 60px;
 }
-#logo{
+.logo_row_pc{
+    background-color: black;
+    height: 60px;
+}
+.logo{
     position: absolute;
-    margin-left: 10px;
     color: white;
     margin: 10px;
     font-size: 25px;
 }
 #contact{
     position: absolute;
-    margin: 20px;
-    right: 15px;
+    margin: 20px 0px;
+    right: 20px;
     color: white;
 }
 .navbar_row{
@@ -84,31 +93,16 @@ hr{
     background-color: white;
     height: 20%;
 }
-#link{
-    height:2rem;
-}
 .link_element{
     display: inline-block;
     font-size: 15px;
-    padding: 2px;
     color: #0000CC;
-    margin-top: 5px;
-}
-#home{
-    margin-left: 16px;
-}
-#label{
-    font-size: 30px;
-    text-align: center;
-    padding: 25px;
-    color: #000099;
+    margin: 5px 0px;
 }
 .info_row{
     background-color: #E0E0E0;
-    height:365px;
 }
 .phone{
-    text-align: center;
     padding-top: 30px;
 }
 .phone *{
@@ -116,9 +110,6 @@ hr{
 }
 .phone .heading{
     font-weight: bold;
-}
-.email{
-    text-align: center;
 }
 .email *{
     display: inline-block;
@@ -135,32 +126,43 @@ hr{
 }
 .footer_row{
     background-color: black;
-    height: 300px;
+    height: auto;
+    padding-bottom: 30px;
+}
+.footer_row  *{
+    color: white;
 }
 .footer{
-    width: 85%;   
+    width: 80%;
 }
-.footer > *{
-    font-weight: bold;
+@media (max-width: 992px) {
+    .line1a, .line2a, .line3a{
+        display: none;
+    }
 }
-.line1 *{
+.line1 *, .line2 *, .line3 *{
     display: inline-block;
-}
-.line1a{
-    display: none;
-}
-.line2 *{
-    display: inline-block;
-}
-.line2a{
-    display: none;
-}
-.line3 *{
-    display: inline-block;
-}
-.line3a{
-    display: none;
 }
 .fa{
     color:white;
+}
+#myLinks{
+    background-color: #262626;
+    display: none;
+    margin-top: 58px;
+    left: 0px;
+}
+#myLinks a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+  
+a#navbar_icon{
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+    position: absolute;
 }

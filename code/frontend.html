@@ -9,8 +9,8 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <script type="text/javascript">    
             $(document).ready(function(){
                 var date = new Date();
@@ -48,6 +48,14 @@
                     $(".line3a").slideToggle("slow");
                 });
             });
+            function navbar() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            };
         </script>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -89,86 +97,141 @@
                     </div>
                 </div>
             </div>
-            <div class="logo_row">
-                <p id="logo">Samsonite</p>
-                <p id="contact">Contact</p>
+            <div class="d-lg-none">
+                <div class="logo_row_mobile row" style="width:100%; margin:0px">
+                    <div class="col-4" style="overflow: hidden;position: relative;">
+                        <a href="javascript:void(0);" id="navbar_icon" onclick="navbar()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div id="myLinks" style="display:none;">
+                            <a href="#news">News</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#about">About</a>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center" style="color: white; font-size: 25px; padding-top: 10px;">Samsonite</div>
+                    <div class="col-4"></div>
+                </div>
             </div>
-            <div class="navbar_row" > 
-                <p class="navbar_element">ABOUT US</p>
-                <p class="navbar_element">INVESTOR RELATIONS</p>
-                <p class="navbar_element">SUSTAINABILITY</p>
+            <div class="d-none d-lg-block">
+                <div class="logo_row_pc">
+                    <p class="logo">Samsonite</p>
+                    <p id="contact">Contact</p>
+                </div>
+                <div class="navbar_row"> 
+                    <p class="navbar_element">ABOUT US</p>
+                    <p class="navbar_element">INVESTOR RELATIONS</p>
+                    <p class="navbar_element">SUSTAINABILITY</p>
+                </div>
             </div>
+            
             <div class="background_row">
                 <img id="background" class="img-fluid mx-auto d-block" src="FE-ex1-banner.jpg">
             </div>
             <div class="label_row">
-                <div id="link">
-                    <p class="link_element" id="home">Home</p>
+                <div class="row d-none d-lg-block">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-2" >
+                            <p class="link_element" id="home">Home</p>
+                            <p class="link_element">></p>
+                            <p class="link_element">Contact us</p>
+                        </div>
+                        <div class="col-8"> </div>
+                    </div>
+                </div>
+                <div class="link d-lg-none">
+                    <p class="link_element" style="margin-left: 15px;">Home</p>
                     <p class="link_element">></p>
                     <p class="link_element">Contact us</p>
                 </div>
-                <div id="label">CONTACT US</div>
+                <div class="label" style="font-size: 30px; text-align: center; padding: 25px; color: #000099;">CONTACT US</div>
             </div>
             <div class="info_row">
-                <div class="phone">
-                    <p class="heading">By Phone:</p>
-                    <p>+852 2422 2611 in Hong Kong</p>
-                </div>
-                <div class="email">
-                    <p class="heading">By Email:</p>
-                    <p>investorrelations@samsionate.com</p>
-                </div>
-                <hr>
-                <div class="card mx-auto my-4 d-block">
-                    <div class="card-body">
-                        <p class="font-weight-bold">Joint Corporate Headquarters and Registered Office in Luxembourg</p>
-                        <p>13-15 avenue de la Liberté</p>
-                        <p>L-1931 Luxembourg</p>
-                        <a href="https://www.google.com/maps">VIEW ON MAP</a>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-4.5">
+                        <div class="phone">
+                            <p class="heading">By Phone:</p>
+                            <p>+852 2422 2611 in Hong Kong</p>
+                        </div>
+                        <div class="email">
+                            <p class="heading">By Email:</p>
+                            <p>investorrelations@samsionate.com</p>
+                        </div>
                     </div>
+                    <div class="col"></div>
                 </div>
+                <hr style="width:60%;margin:auto;">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col-10 col-lg-6">
+                        <div class="card mx-auto my-4 d-block" style="width:100%;">
+                            <div class="card-body">
+                                <p class="font-weight-bold">Joint Corporate Headquarters and Registered Office in Luxembourg</p>
+                                <p>13-15 avenue de la Liberté</p>
+                                <p>L-1931 Luxembourg</p>
+                                <a href="https://www.google.com/maps">VIEW ON MAP</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>                
             </div>
             <div class="footer_row">
-                <div class="footer mx-auto pt-3">
-                    <div class="row1 text-white">
-                        <hr style="background-color:white;">
-                        <div class="line1 mt-1">
-                            <p style="width: 80%;">Joint Company Headquarters and Registered Office in Luxembourg</p>
+                <div class="row pt-2 mx-auto px-3" >
+                    <div class="col-12 col-lg-3">
+                        <div class="d-lg-none">
+                            <hr style="background-color:white;">
                             <p id="plus1" style="font-size: 30px;float:right;margin:0;">+</p>
                         </div>
-                        <div class="line1a ml-2">
-                            <p>13-15 avenue de la Liberté</p>
-                            <p>L-1931 Luxembourg</p>
+                        <div>Joint Company Headquarters and Registered Office in Luxembourg</div>
+                        <div class="line1a">
+                            <div>13-15 avenue de la Liberté</div>
+                            <div>L-1931 Luxembourg</div>
                         </div>
-                    </div>                   
-                    <div class="row2 text-white">
-                        <hr style="background-color:white;">
-                        <div class="line2 mt-1">
-                            <p style="width: 80%;">Joint Corporate Headquarters</p>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <div class="d-lg-none">
+                            <hr style="background-color:white;">
                             <p id="plus2" style="font-size: 30px;float:right;margin:0;">+</p>
                         </div>
-                        <div class="line2a ml-2">
-                            <p>575 West Street, Suite 110</p>
-                            <p>Mansfield, MA 02048, USA</p>
+                        <div>Joint Corporate Headquarters</div>
+                        <div class="line2a">
+                            <div>575 West Street, Suite 110</div>
+                            <div>Mansfield, MA 02048, USA</div>
                         </div>
+                        
                     </div>
-                    <div class="row3 text-white">
-                        <hr style="background-color:white;">
-                        <div class="line3 mt-1">
-                            <p style="width: 80%;">Principal Place of Business in HongKong</p>
+                    <div class="col-12 col-lg-3">
+                        <div class="d-lg-none">
+                            <hr style="background-color:white;">
                             <p id="plus3" style="font-size: 30px;float:right;margin:0;">+</p>
                         </div>
-                        <div class="line3a ml-2">
-                            <p>25/F, Tower 2, The Gateway,</p>
-                            <p>Harbour City, 25 CantonRoad</p>
-                            <p>Tsimhatsui, Kowloon, Hong Kong</p>
+                        <div>Principal Place of Business in HongKong</div>
+                        <div class="line3a">
+                            <div>25/F, Tower 2, The Gateway,</div>
+                            <div>Harbour City, 25 CantonRoad</div>
+                            <div>Tsimhatsui, Kowloon, Hong Kong</div>
                         </div>
+                        
                     </div>
-                    <div class="row4 text-white">
-                        <hr style="background-color:white;">
-                        <p class="mt-1">Call us on +852 2422 2611</p>
+                    <div class="col"></div>
+                    <div class="col-12 col-lg-2">
+                        <div class="d-lg-none">
+                            <hr style="background-color:white;">
+                        </div>
+                        <div >Call us on +852 2422 2611</div>
                     </div>
                 </div>
+                <div class="row pt-1 px-3" style="margin:0px;">
+                    <div class="col-12 col-lg-5">
+                        <p style="color: white; font-size: 35px;margin:0px;">Samsonite</p>
+                        <p>Copyright 2021 Samsonite IP Holdings S.à.r.l. All rights reserved.</p>
+                    </div>
+                    <div class="col-5"></div>
+                    <div class="col-12 col-lg-2"></div>
+                </div>        
             </div>
         </div>
         <script src="jquery.countdown.js"></script>
